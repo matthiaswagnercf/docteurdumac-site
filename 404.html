@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page introuvable</title>
+<meta name="description" content="Cette adresse ne mène nulle part. Retour à l’accueil de Docteur du Mac, réparation Mac à domicile.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#071B1E">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="simple-page">
+<header class="bar">
+  <nav class="bar__nav" aria-label="Navigation"><a class="bar__mark" href="/" aria-label="Docteur du Mac, accueil"><span data-token="MARQUE">Docteur du Mac</span></a></nav>
+</header>
+<main>
+<section class="simple container">
+  <h1>Page introuvable.</h1>
+  <p class="lede">Cette adresse ne mène nulle part. <a href="/">Retour à l’accueil</a>.</p>
+  <p class="lede" lang="en-CA">This page does not exist. <a href="/en/">Back to the English home page</a>.</p>
+</section>
+</main>
+<script>
+(function () {
+  function ping(nom) {
+    var i = document.createElement("iframe");
+    i.src = "/evenement/" + nom + ".html"; i.hidden = true; i.tabIndex = -1; i.setAttribute("aria-hidden", "true"); i.title = "mesure";
+    document.body.appendChild(i);
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[href^='tel:'], a[href^='mailto:'], a[href^='sms:'], a[data-evenement]") : null;
+    if (!a) return;
+    var h = a.getAttribute("href") || "";
+    ping(a.getAttribute("data-evenement") || (h.indexOf("tel:") === 0 ? "appel" : h.indexOf("sms:") === 0 ? "texto" : "courriel"));
+  });
+})();
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "CF_BEACON_TOKEN"}'></script>
+</body>
+</html>
