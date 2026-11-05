@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request received</title>
+<meta name="description" content="Your request came through. I read it myself and get back to you with a time and a price.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#071B1E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="simple-page">
+<a class="skip" href="#content">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol></svg>
+<header class="bar">
+  <nav class="bar__nav" aria-label="Navigation"><a class="bar__mark" href="index.html" aria-label="Docteur du Mac, home page"><span data-token="MARQUE">Docteur du Mac</span></a></nav>
+  <a class="pill bar__cta" href="tel:+15142640028">Call <span class="disc"><svg aria-hidden="true"><use href="#i-phone"/></svg></span></a>
+</header>
+<main id="content">
+<section class="simple simple--top container" aria-labelledby="title">
+  <h1 id="title">Your request came through.</h1>
+  <p class="lede">I read it myself. I’ll get back to you at the number you gave, with two possible times and the price, travel included.</p>
+  <p class="lede">Save my number, <b class="nb">514-264-0028</b>, as “Docteur du Mac” so you recognise my message.</p>
+  <a class="pill" href="tel:+15142640028">Urgent? Call <span class="nb">514-264-0028</span> <span class="disc"><svg aria-hidden="true"><use href="#i-phone"/></svg></span></a>
+</section>
+<div class="more container">
+<section id="next" aria-labelledby="t-next">
+  <h2 id="t-next">What happens next</h2>
+  <ol class="steps">
+    <li><h3>I get back to you.</h3><p>I contact you at the number you gave. If you left your email, I also write from docteur_mac@me.com.</p></li>
+    <li><h3>You pick a time.</h3><p>Just reply with the day that suits you. The price is in my message.</p></li>
+    <li><h3>I confirm the visit.</h3><p>I write the day before to confirm, and let you know when I’m on my way.</p></li>
+  </ol>
+</section>
+<section id="email" aria-labelledby="t-email">
+  <h2 id="t-email">So nothing gets lost</h2>
+  <ul class="promises">
+    <li><h3>Add me to your contacts.</h3><p>My email: docteur_mac@me.com.</p></li>
+    <li><h3>Nothing yet?</h3><p>Look in your spam folder and mark the message as safe.</p></li>
+    <li><h3>Something came up?</h3><p>Reply to my message and you’ll pick another time.</p></li>
+  </ul>
+</section>
+<section id="before" aria-labelledby="t-before">
+  <h2 id="t-before">Before I arrive</h2>
+  <p class="lede">Does your Mac still start? Check your backup in 20 seconds. Open System Settings, then General, then Time Machine. If no backup shows up, or the last one is months old, tell me: I can set it up during the visit.</p>
+  <a class="pill" href="visit.html">See how a visit goes <span class="disc"><svg aria-hidden="true"><use href="#i-chevron"/></svg></span></a>
+</section>
+</div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 <b><span data-token="MARQUE">Docteur du Mac</span></b>. Independent service, not affiliated with Apple Inc. Mac is a trademark of Apple Inc.</p>
+    <ul>
+      <li><a class="pill pill--quiet" href="tel:+15142640028">514-264-0028</a></li>
+      <li><a class="pill pill--quiet" href="mailto:docteur_mac@me.com">docteur_mac@me.com</a></li>
+      <li><a class="pill pill--quiet" href="../merci.html" hreflang="fr-CA" lang="fr">Français</a></li>
+    </ul>
+  </div>
+</footer>
+<script>
+(function () {
+  var bar = document.querySelector(".bar"), foot = document.querySelector(".footer");
+  if (!bar || !foot || !("IntersectionObserver" in window)) return;
+  new IntersectionObserver(function (e) { bar.classList.toggle("is-near", e[0].isIntersecting); }, { rootMargin: "0px 0px -1px 0px" }).observe(foot);
+})();
+</script>
+<script>
+(function () {
+  function ping(nom) {
+    var i = document.createElement("iframe");
+    i.src = "/evenement/" + nom + ".html"; i.hidden = true; i.tabIndex = -1; i.setAttribute("aria-hidden", "true"); i.title = "mesure";
+    document.body.appendChild(i);
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[href^='tel:'], a[href^='mailto:'], a[href^='sms:'], a[data-evenement]") : null;
+    if (!a) return;
+    var h = a.getAttribute("href") || "";
+    ping(a.getAttribute("data-evenement") || (h.indexOf("tel:") === 0 ? "appel" : h.indexOf("sms:") === 0 ? "texto" : "courriel"));
+  });
+})();
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "CF_BEACON_TOKEN"}'></script>
+</body>
+</html>
