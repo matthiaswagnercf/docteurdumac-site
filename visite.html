@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comment se passe une visite</title>
+<meta name="description" content="Ce qu’il faut préparer, ce qui se passe chez vous et ce que vous recevez à la fin de ma visite.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#071B1E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="simple-page">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol></svg>
+<header class="bar">
+  <nav class="bar__nav" aria-label="Navigation"><a class="bar__mark" href="index.html" aria-label="Docteur du Mac, accueil"><span data-token="MARQUE">Docteur du Mac</span></a></nav>
+  <a class="pill bar__cta" href="tel:+15142640028">Appeler <span class="disc"><svg aria-hidden="true"><use href="#i-phone"/></svg></span></a>
+</header>
+<main id="contenu">
+<section class="simple simple--top container" aria-labelledby="titre">
+  <h1 id="titre">Comment se passe une visite</h1>
+  <p class="lede">Voici ce qui se passe, du premier message jusqu’à la fin de la visite.</p>
+  <a class="pill" href="tel:+15142640028">Une question? Appeler le <span class="nb">514&nbsp;264-0028</span> <span class="disc"><svg aria-hidden="true"><use href="#i-phone"/></svg></span></a>
+</section>
+<div class="more container">
+<section id="avant" aria-labelledby="t-avant">
+  <h2 id="t-avant">Avant la visite</h2>
+  <ol class="steps">
+    <li><h3>Le chargeur.</h3><p>Gardez le chargeur de l’appareil à portée de main, près d’une prise.</p></li>
+    <li><h3>Les mots de passe.</h3><p>Celui de votre session, et celui de votre compte Apple, Google ou Microsoft. Vous les tapez vous-même si vous préférez.</p></li>
+    <li><h3>Le problème en une phrase.</h3><p>Depuis quand il dure, et le message d’erreur s’il y en a un. Une photo de l’écran prise avec votre téléphone suffit.</p></li>
+  </ol>
+</section>
+<section id="pendant" aria-labelledby="t-pendant">
+  <h2 id="t-pendant">Pendant la visite</h2>
+  <ul class="promises">
+    <li><h3>Je travaille devant vous.</h3><p>Je m’assois devant votre Mac, et vous regardez si vous le voulez.</p></li>
+    <li><h3>Je vous dis ce que je vais faire.</h3><p>Avant de toucher à quoi que ce soit, je vous explique ce que je vais faire et combien de temps cela devrait prendre.</p></li>
+    <li><h3>Si votre Mac doit partir, vous le savez d’abord.</h3><p>Si la réparation demande plus de temps ou une pièce, j’emporte l’appareil avec votre accord et je vous le rapporte.</p></li>
+  </ul>
+</section>
+<section id="fin" aria-labelledby="t-fin">
+  <h2 id="t-fin">À la fin</h2>
+  <ul class="promises promises--two">
+    <li><h3>Vous comprenez ce qui a été fait.</h3><p>Je vous explique le problème et ce que j’ai fait, sans jargon, et ce que vous pouvez faire vous-même la prochaine fois.</p></li>
+    <li><h3>Vos photos sont-elles sauvegardées?</h3><p>Ouvrez Réglages Système, puis Général, puis Time Machine. Si aucune sauvegarde n’apparaît, ou si la dernière date de plusieurs mois, vos photos n’existent qu’à un seul endroit. Je peux mettre la sauvegarde en place pendant la visite ou à distance.</p></li>
+  </ul>
+</section>
+<section id="distance" aria-labelledby="t-distance">
+  <h2 id="t-distance">Si c’est à distance</h2>
+  <p class="lede">La session commence seulement quand vous la demandez. Vous voyez sur votre écran tout ce que je fais, du début à la fin.</p>
+</section>
+<section id="empechement" aria-labelledby="t-empechement">
+  <h2 id="t-empechement">Un empêchement?</h2>
+  <p class="lede">Répondez à mon message, et nous choisirons un autre moment ensemble.</p>
+  <a class="pill" href="tel:+15142640028">Appeler le <span class="nb">514&nbsp;264-0028</span> <span class="disc"><svg aria-hidden="true"><use href="#i-phone"/></svg></span></a>
+</section>
+</div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 <b><span data-token="MARQUE">Docteur du Mac</span></b>. Service indépendant, non affilié à Apple Inc. Mac est une marque d’Apple Inc.</p>
+    <ul>
+      <li><a class="pill pill--quiet" href="tel:+15142640028">514&nbsp;264-0028</a></li>
+      <li><a class="pill pill--quiet" href="mailto:docteur_mac@me.com">docteur_mac@me.com</a></li>
+      <li><a class="pill pill--quiet" href="en/visit.html" hreflang="en-CA" lang="en">English</a></li>
+    </ul>
+  </div>
+</footer>
+<script>
+(function () {
+  var bar = document.querySelector(".bar"), foot = document.querySelector(".footer");
+  if (!bar || !foot || !("IntersectionObserver" in window)) return;
+  new IntersectionObserver(function (e) { bar.classList.toggle("is-near", e[0].isIntersecting); }, { rootMargin: "0px 0px -1px 0px" }).observe(foot);
+})();
+</script>
+<script>
+(function () {
+  function ping(nom) {
+    var i = document.createElement("iframe");
+    i.src = "/evenement/" + nom + ".html"; i.hidden = true; i.tabIndex = -1; i.setAttribute("aria-hidden", "true"); i.title = "mesure";
+    document.body.appendChild(i);
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[href^='tel:'], a[href^='mailto:'], a[href^='sms:'], a[data-evenement]") : null;
+    if (!a) return;
+    var h = a.getAttribute("href") || "";
+    ping(a.getAttribute("data-evenement") || (h.indexOf("tel:") === 0 ? "appel" : h.indexOf("sms:") === 0 ? "texto" : "courriel"));
+  });
+})();
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "CF_BEACON_TOKEN"}'></script>
+</body>
+</html>
