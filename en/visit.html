@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How a visit goes</title>
+<meta name="description" content="What to have ready, what happens at your place and what you get at the end of my visit.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#071B1E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="simple-page">
+<a class="skip" href="#content">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol></svg>
+<header class="bar">
+  <nav class="bar__nav" aria-label="Navigation"><a class="bar__mark" href="index.html" aria-label="Docteur du Mac, home page"><span data-token="MARQUE">Docteur du Mac</span></a></nav>
+  <a class="pill bar__cta" href="tel:+15142640028">Call <span class="disc"><svg aria-hidden="true"><use href="#i-phone"/></svg></span></a>
+</header>
+<main id="content">
+<section class="simple simple--top container" aria-labelledby="title">
+  <h1 id="title">How a visit goes</h1>
+  <p class="lede">Here’s what happens, from the first message to the end of the visit.</p>
+  <a class="pill" href="tel:+15142640028">A question? Call <span class="nb">514-264-0028</span> <span class="disc"><svg aria-hidden="true"><use href="#i-phone"/></svg></span></a>
+</section>
+<div class="more container">
+<section id="before" aria-labelledby="t-before">
+  <h2 id="t-before">Before the visit</h2>
+  <ol class="steps">
+    <li><h3>The charger.</h3><p>Keep the device’s charger handy, near an outlet.</p></li>
+    <li><h3>The passwords.</h3><p>Your computer password, and the one for your Apple, Google or Microsoft account. You can type them in yourself if you’d rather.</p></li>
+    <li><h3>The problem in one sentence.</h3><p>When it started, and the error message if there is one. A photo of the screen taken with your phone is enough.</p></li>
+  </ol>
+</section>
+<section id="during" aria-labelledby="t-during">
+  <h2 id="t-during">During the visit</h2>
+  <ul class="promises">
+    <li><h3>I work in front of you.</h3><p>I sit down at your Mac, and you can watch if you like.</p></li>
+    <li><h3>I tell you what I’ll do.</h3><p>Before I touch anything, I explain what I plan to do and about how long it should take.</p></li>
+    <li><h3>If your Mac has to leave, you know first.</h3><p>If a repair needs more time or a part, I take the device with your agreement and bring it back.</p></li>
+  </ul>
+</section>
+<section id="end" aria-labelledby="t-end">
+  <h2 id="t-end">At the end</h2>
+  <ul class="promises promises--two">
+    <li><h3>You understand what was done.</h3><p>I explain the problem and what I did, in plain words, and what you can do yourself next time.</p></li>
+    <li><h3>Are your photos backed up?</h3><p>Open System Settings, then General, then Time Machine. If no backup shows up, or the last one is months old, your photos live in one place only. I can set up the backup during the visit or remotely.</p></li>
+  </ul>
+</section>
+<section id="remote" aria-labelledby="t-remote">
+  <h2 id="t-remote">If it’s remote</h2>
+  <p class="lede">The session starts only when you ask for it. You see everything I do on your screen, from start to finish.</p>
+</section>
+<section id="change" aria-labelledby="t-change">
+  <h2 id="t-change">Something came up?</h2>
+  <p class="lede">Reply to my message and we’ll pick another time together.</p>
+  <a class="pill" href="tel:+15142640028">Call <span class="nb">514-264-0028</span> <span class="disc"><svg aria-hidden="true"><use href="#i-phone"/></svg></span></a>
+</section>
+</div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 <b><span data-token="MARQUE">Docteur du Mac</span></b>. Independent service, not affiliated with Apple Inc. Mac is a trademark of Apple Inc.</p>
+    <ul>
+      <li><a class="pill pill--quiet" href="tel:+15142640028">514-264-0028</a></li>
+      <li><a class="pill pill--quiet" href="mailto:docteur_mac@me.com">docteur_mac@me.com</a></li>
+      <li><a class="pill pill--quiet" href="../visite.html" hreflang="fr-CA" lang="fr">Français</a></li>
+    </ul>
+  </div>
+</footer>
+<script>
+(function () {
+  var bar = document.querySelector(".bar"), foot = document.querySelector(".footer");
+  if (!bar || !foot || !("IntersectionObserver" in window)) return;
+  new IntersectionObserver(function (e) { bar.classList.toggle("is-near", e[0].isIntersecting); }, { rootMargin: "0px 0px -1px 0px" }).observe(foot);
+})();
+</script>
+<script>
+(function () {
+  function ping(nom) {
+    var i = document.createElement("iframe");
+    i.src = "/evenement/" + nom + ".html"; i.hidden = true; i.tabIndex = -1; i.setAttribute("aria-hidden", "true"); i.title = "mesure";
+    document.body.appendChild(i);
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[href^='tel:'], a[href^='mailto:'], a[href^='sms:'], a[data-evenement]") : null;
+    if (!a) return;
+    var h = a.getAttribute("href") || "";
+    ping(a.getAttribute("data-evenement") || (h.indexOf("tel:") === 0 ? "appel" : h.indexOf("sms:") === 0 ? "texto" : "courriel"));
+  });
+})();
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "CF_BEACON_TOKEN"}'></script>
+</body>
+</html>
