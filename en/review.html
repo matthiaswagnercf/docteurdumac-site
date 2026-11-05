@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leave a review</title>
+<meta name="description" content="Leave a Google review for Docteur du Mac.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#071B1E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="simple-page">
+<a class="skip" href="#content">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol></svg>
+<header class="bar">
+  <nav class="bar__nav" aria-label="Navigation"><a class="bar__mark" href="index.html" aria-label="Docteur du Mac, home page"><span data-token="MARQUE">Docteur du Mac</span></a></nav>
+</header>
+<main id="content">
+<section class="simple container" aria-labelledby="title">
+  <h1 id="title">Thank you for trusting me.</h1>
+  <p class="lede">A Google review helps other people near you find me. One or two sentences is plenty: the problem you had, and how it went.</p>
+  <a class="pill" href="https://search.google.com/local/writereview?placeid=GOOGLE_PLACE_ID" data-evenement="clic-avis" rel="noopener">Leave a review on Google <span class="disc"><svg aria-hidden="true"><use href="#i-chevron"/></svg></span></a>
+  <p class="note">You need a Google account. Don’t have one? Just reply to my message, I’ll be glad to hear from you.</p>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 <b><span data-token="MARQUE">Docteur du Mac</span></b>. Independent service, not affiliated with Apple Inc. Mac is a trademark of Apple Inc.</p>
+    <ul>
+      <li><a class="pill pill--quiet" href="tel:+15142640028">514-264-0028</a></li>
+      <li><a class="pill pill--quiet" href="mailto:docteur_mac@me.com">docteur_mac@me.com</a></li>
+      <li><a class="pill pill--quiet" href="../avis.html" hreflang="fr-CA" lang="fr">Français</a></li>
+    </ul>
+  </div>
+</footer>
+<script>
+(function () {
+  function ping(nom) {
+    var i = document.createElement("iframe");
+    i.src = "/evenement/" + nom + ".html"; i.hidden = true; i.tabIndex = -1; i.setAttribute("aria-hidden", "true"); i.title = "mesure";
+    document.body.appendChild(i);
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[href^='tel:'], a[href^='mailto:'], a[href^='sms:'], a[data-evenement]") : null;
+    if (!a) return;
+    var h = a.getAttribute("href") || "";
+    ping(a.getAttribute("data-evenement") || (h.indexOf("tel:") === 0 ? "appel" : h.indexOf("sms:") === 0 ? "texto" : "courriel"));
+  });
+})();
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "CF_BEACON_TOKEN"}'></script>
+</body>
+</html>
