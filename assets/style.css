@@ -279,3 +279,40 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 52px; 
   .more { gap: 56px; padding-bottom: 72px; }
   .section__cta .pill, .more .pill { max-width: 100%; white-space: normal; line-height: 1.2; padding-block: 10px; text-align: left; }
 }
+
+/* SEO (2026-11-06): links inside the service cards, the municipality list by MRC in the zone card, the five content pages on the simple layout. Existing tokens only. */
+.cards a, .about__facts a { color: inherit; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
+.cards .card__links { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 4px; font-size: var(--text-small); color: var(--orange-deep); }
+.about__facts { font-size: var(--text-small); color: var(--body); max-width: 50ch; }
+.mrc { width: 100%; max-width: 800px; text-align: left; }
+.mrc summary { display: inline-flex; align-items: center; gap: 10px; min-height: 42px; padding: 0 18px; border: 1.5px solid var(--teal-soft); border-radius: var(--pill); font-size: var(--text-ui); cursor: pointer; list-style: none; }
+.mrc summary::-webkit-details-marker { display: none; }
+.mrc summary .disc { transition: transform var(--dur) var(--ease); }
+.mrc[open] summary .disc { transform: rotate(180deg); }
+.mrc dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; margin: 18px 0 0; }
+.mrc dt { font-weight: 500; }
+.mrc dd { margin: 4px 0 0; font-size: var(--text-small); line-height: 1.5; color: var(--teal-soft); }
+.page .lede { max-width: 52ch; }
+.page .steps li::before { background: var(--white); color: var(--orange-deep); }
+.page .steps h3, .page .promises h3 { color: inherit; }
+.page .promises h3 { color: var(--orange-deep); }
+.page .faq { width: 100%; max-width: 760px; }
+.page .faq details { color: var(--teal); }
+.page .faq details p a { color: inherit; }
+.page .check { display: grid; gap: 14px; width: 100%; max-width: 760px; }
+.page .check li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 12px; align-items: start; padding: 18px 20px; background: rgb(255 255 255 / 0.06); border: 1px solid var(--teal-line); border-radius: var(--r-card); font-size: var(--text-ui); }
+.page .check .disc { color: #F48259; margin-top: 2px; }
+.page .cities { justify-content: flex-start; }
+.page .mrc dd { color: var(--teal-soft); }
+.page .actions .pill--ghost { border-color: var(--teal-soft); }
+.page .related { display: flex; flex-wrap: wrap; gap: 10px; }
+.page .related a { display: inline-flex; align-items: center; min-height: 42px; padding: 0 18px; border: 1.5px solid var(--teal-soft); border-radius: var(--pill); font-size: var(--text-ui); text-decoration: none; }
+.page .related a:hover { background: var(--white); color: var(--teal); border-color: var(--white); }
+.page .crumbs { font-size: var(--text-small); color: var(--teal-soft); }
+.page .crumbs a { color: inherit; }
+@media (max-width: 40rem) { .mrc dl { grid-template-columns: minmax(0, 1fr); } }
+/* Garde (2026-11-06) : dans les grilles alignées au début ou au centre (.simple, .more, .zone), une largeur maximale en ch ne dépasse jamais l'écran. */
+.simple h1 { max-width: min(13ch, 100%); }
+.simple .lede, .simple .note { max-width: min(46ch, 100%); }
+.more h2, .zone h2 { max-width: min(20ch, 100%); }
+.more .lede, .more .note, .page .lede, .zone__note { max-width: min(52ch, 100%); }
