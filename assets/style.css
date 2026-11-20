@@ -205,6 +205,7 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 52px; 
 .footer p b { font-weight: 600; }
 .footer ul { display: flex; flex-wrap: wrap; gap: 8px; }
 .footer .pill { min-height: 40px; padding: 0 16px; font-size: 0.875rem; }
+.footer .pill--icon { width: 40px; padding: 0; }
 
 @media (max-width: 68rem) {
   .bar__links { display: none; }
@@ -225,6 +226,7 @@ select.input { appearance: none; -webkit-appearance: none; padding-right: 52px; 
   .footer { padding: 10px 0; }
   .footer .container { grid-template-columns: minmax(0, 1fr); gap: 6px; }
   .footer .pill { min-height: 36px; }
+  .footer .pill--icon { width: 36px; }
 }
 @media (max-width: 40rem) {
   :root { --gutter: 20px; --r-section: 40px; --bar: 64px; }
